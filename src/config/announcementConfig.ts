@@ -2,10 +2,11 @@ import type { AnnouncementConfig } from "../types/announcementConfig";
 
 export const announcementConfig: AnnouncementConfig = {
 	// 公告标题，留空则走i18n默认标题
-	title: "",
+	title: "关于本站",
 
 	// 公告内容
-	content: "欢迎来到我的博客！这是一则示例公告。",
+	content:
+		"这里记录我的 Unreal Engine 项目：Gameplay 系统实现、游戏算法，以及开发中遇到的难题与解法。",
 
 	// 是否允许用户关闭公告
 	closable: true,

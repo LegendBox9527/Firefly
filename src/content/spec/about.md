@@ -1,27 +1,24 @@
-# 关于我 / About Me
+# 关于我 / About
 
-你好！我是 **夏叶** ，一个在数字世界中默默无闻的一片叶子。
+我是 **LegendBox**，一名 Unreal Engine 开发者。
+
+大部分时间在引擎里和 Gameplay 系统、性能、算法打交道。这个站点是我整理开发记录的地方——写下来的过程，本身也是把思路捋清楚的过程。
 
 ## 🛠️ 关于本站
 
-这个网站使用 **Astro** 框架构建，采用了 [Firefly](https://github.com/CuteLeaf/Firefly) 模板，Firefly 是基于 [Fuwari](https://github.com/saicaca/fuwari) 的二次开发。
+本站用 **Astro** 构建，基于开源主题 [Firefly](https://github.com/CuteLeaf/Firefly)（其上游为 [Fuwari](https://github.com/saicaca/fuwari)）二次配置而成，感谢作者们的开源工作。
 
-**Firefly** 是一款基于 Astro 框架和 Fuwari 模板开发的清新美观且现代化个人博客主题模板，专为技术爱好者和内容创作者设计。该主题融合了现代 Web 技术栈，提供了丰富的功能模块和高度可定制的界面，让您能够轻松打造出专业且美观的个人博客网站。
+## 📝 这里写什么
 
+- **UE 项目记录**：Gameplay 框架、角色与技能系统、资源与模块组织
+- **游戏算法**：寻路、行为决策、程序化生成，以及各种数据结构与性能取舍
+- **难题复盘**：那些卡住几个晚上的崩溃、内存问题、构建与打包异常，以及最后是怎么解决的
 
-**🖥️在线预览： [Firefly - Demo site](https://firefly.cuteleaf.cn/)**
+## 📮 联系我
 
-**📝Firefly使用文档： [https://docs-firefly.cuteleaf.cn](https://docs-firefly.cuteleaf.cn/)**
-
-**⭐Firefly开源地址：[https://github.com/CuteLeaf/Firefly](https://github.com/CuteLeaf/Firefly)** 
-
-**⭐Fuwari开源地址：[https://github.com/saicaca/fuwari](https://github.com/saicaca/fuwari)**
-
-::github{repo="CuteLeaf/Firefly"}
-
-::github{repo="saicaca/fuwari"}
+- GitHub：[github.com/LegendBox9527](https://github.com/LegendBox9527)
+- 邮箱：1476727322@qq.com
 
 ---
 
-*感谢你的来访！希望在这里能找到对你有用的内容！*
-
+*如果某篇文章帮你省下一点时间，那它就值得写。*

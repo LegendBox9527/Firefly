@@ -31,7 +31,9 @@ declare global {
 }
 
 export function getDefaultHue(): number {
-	const fallback = "250";
+	// 服务端渲染时拿不到 #config-carrier，回退到配置文件里的主题色相，
+	// 避免 SSR 输出与客户端不一致（客户端仍优先读取 #config-carrier 的 data-hue）
+	const fallback = String(siteConfig.themeColor.hue);
 	// 检查是否在浏览器环境中
 	if (typeof document === "undefined") {
 		return Number.parseInt(fallback, 10);

@@ -10,63 +10,61 @@ export const displaySettingsConfig: DisplaySettingsConfig =
 	resolveDisplaySettingsConfig({
 		// ── 总开关 (Master switch) ────────────────────────────
 
-		// 视图设置面板总开关，关闭时下方所有设置项均不生效，前台将不显示设置面板
-		// 开启后设置面板组件及其依赖（各设置项逻辑、图标等）会打进客户端产物，
-		// 会导致构建体积变大、首屏多一份 JS 影响性能；关闭则完全不渲染面板，体积更小，
-		// 壁纸模式切换开关，这一项是构建体积的大头
-		// 壁纸模式切换开关设为 false 则不显示壁纸模式切换开关，始终使用 backgroundWallpaper 配置的默认壁纸模式
-		// 壁纸模式切换开关设为 true 时，为了能在运行时切换，构建期必须把各壁纸模式所需的整套内容，导致构建体积大幅增加，大概+33 KB/页，首屏加载时间变长，性能下降
-
+		// 视图设置面板总开关：开启后导航栏右侧出现调色板按钮，
+		// 点开即浮动面板（内含主题色相滑动条，可 0–360° 调整整站配色）。
+		// 面板开启后其组件会打进客户端产物，会略微增加构建体积与首屏 JS；
+		// 如果只想要固定的配色、不需要前台调色，把它设回 false 即可。
+		//
 		// 除了改这里，也可以在部署平台（Vercel / Cloudflare 等）配置环境变量开启，
 		// 无需改动本文件：PUBLIC_DISPLAY_SETTINGS=true
 		// 环境变量优先级更高，未设置或取值无法识别时使用这里的值
-		// 生产环境建议默认关闭，只在开发调试环境开启用来预览效果
-		enable: false,
+		enable: true,
 
 		// ── 外观 (Appearance) ──────────────────────────────────
 
-		// 主题色选择器开关
+		// 主题色相滑动条（本站唯一启用的设置项）
+		// 拖动即可实时改变 --hue，整站配色（主色、卡片、按钮、标签等）跟随变化，
+		// 当前默认色相为 siteConfig.themeColor.hue（165，偏绿）。
 		themeColorSwitchable: true,
 
+		// 以下设置项本站不需要，全部关闭以减少面板复杂度与产物体积。
+		// 需要其中某一项时，把对应值改为 true 即可恢复。
+
 		// 文章列表布局切换开关
-		layoutSwitchable: true,
+		layoutSwitchable: false,
 
 		// 卡片边框和阴影开关
-		cardBorderSwitchable: true,
+		cardBorderSwitchable: false,
 
 		// 卡片风格跟随主题色开关
-		cardFollowThemeSwitchable: true,
+		cardFollowThemeSwitchable: false,
 
 		// ── 壁纸 (Wallpaper) ──────────────────────────────────
 
-		// 壁纸模式切换开关
-		wallpaperModeSwitchable: true,
+		// 壁纸模式切换开关（这是构建体积的大头，约 +33 KB/页，本站关闭）
+		wallpaperModeSwitchable: false,
 
 		// 全屏壁纸布局切换开关（classic / hero）
-		fullscreenLayoutSwitchable: true,
+		fullscreenLayoutSwitchable: false,
 
 		// 水波纹动画开关
-		wavesSwitchable: true,
+		wavesSwitchable: false,
 
 		// 渐变过渡效果开关
-		gradientSwitchable: true,
+		gradientSwitchable: false,
 
 		// 横幅标题显示开关
-		bannerTitleSwitchable: true,
+		bannerTitleSwitchable: false,
 
 		// 壁纸轮播开关
-		bannerCarouselSwitchable: true,
+		bannerCarouselSwitchable: false,
 
 		// 全屏壁纸/透明覆盖模式参数调节开关
 		// 设为 false 关闭所有滑块，或用对象形式单独控制每个滑块
-		overlaySwitchable: {
-			opacity: true,
-			blur: true,
-			cardOpacity: true,
-		},
+		overlaySwitchable: false,
 
 		// ── 特效 (Effects) ────────────────────────────────────
 
 		// 樱花特效开关
-		sakuraSwitchable: true,
+		sakuraSwitchable: false,
 	});
